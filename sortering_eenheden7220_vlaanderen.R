@@ -79,8 +79,7 @@ units_7220_ranked %>% st_write("output/type7220_ranked.gpkg",
                                layer = "units_7220_ranked",
                                delete_dsn = TRUE)
 points_7220_ranked %>% st_write("output/type7220_ranked.gpkg",
-                               layer = "points_7220_ranked",
-                               delete_dsn = TRUE)
+                               layer = "points_7220_ranked")
 units_7220_ranked %>% st_write("output/units_7220_ranked.shp",
                                delete_dsn = TRUE)
 points_7220_ranked %>% st_write("output/points_7220_ranked.shp",
