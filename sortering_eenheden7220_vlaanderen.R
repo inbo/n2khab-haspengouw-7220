@@ -84,7 +84,7 @@ units_7220_ranked %>% st_write("output/units_7220_ranked.shp",
                                delete_dsn = TRUE)
 points_7220_ranked %>% st_write("output/points_7220_ranked.shp",
                                delete_dsn = TRUE)
-  # Laatste versie van gpkg & shp: see <gdrive link>.
+  # Laatste versie van gpkg & shp: zie GDrive link in README.
   # Shapefile is een formaat met afgekapte veldnamen.
 
   # GeoJSON files voor bewaring in de git repo:
