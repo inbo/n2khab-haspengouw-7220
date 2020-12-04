@@ -2,6 +2,7 @@
 options(rgdal_show_exportToProj4_warnings = "none")
 library(n2khab)
 library(dplyr)
+library(readr)
 library(sf)
 library(ggplot2)
 library(mapview)
@@ -108,6 +109,38 @@ points_7220_ranked %>%
   st_write("output/points_7220_haspengouw_ranked.geojson",
            layer_options = "RFC7946=YES",
            delete_dsn = TRUE)
+
+  # tsv files met attributen:
+
+units_7220_ranked %>%
+  mutate(x = st_coordinates(.)[,1],
+         y = st_coordinates(.)[,2]) %>%
+  st_drop_geometry %>%
+  relocate(x, y, .after = 1) %>%
+  write_tsv("output/units_7220_ranked.tsv")
+
+units_7220_ranked %>%
+  filter(haspengouw) %>%
+  mutate(x = st_coordinates(.)[,1],
+         y = st_coordinates(.)[,2]) %>%
+  st_drop_geometry %>%
+  relocate(x, y, .after = 1) %>%
+  write_tsv("output/units_7220_haspengouw_ranked.tsv")
+
+points_7220_ranked %>%
+  mutate(x = st_coordinates(.)[,1],
+         y = st_coordinates(.)[,2]) %>%
+  st_drop_geometry %>%
+  relocate(x, y, .after = 1) %>%
+  write_tsv("output/points_7220_ranked.tsv")
+
+points_7220_ranked %>%
+  filter(haspengouw) %>%
+  mutate(x = st_coordinates(.)[,1],
+         y = st_coordinates(.)[,2]) %>%
+  st_drop_geometry %>%
+  relocate(x, y, .after = 1) %>%
+  write_tsv("output/points_7220_haspengouw_ranked.tsv")
 
 # Een GeoJSON inlezen en transformeren naar CRS 'Belge 1972 / Belgian Lambert 72':
 read_sf("output/units_7220_haspengouw_ranked.geojson") %>%
