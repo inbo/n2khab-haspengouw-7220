@@ -81,11 +81,30 @@ units_7220_ranked %>% st_write("output/type7220_ranked.gpkg",
                                delete_dsn = TRUE)
 points_7220_ranked %>% st_write("output/type7220_ranked.gpkg",
                                layer = "points_7220_ranked")
+units_7220_ranked %>%
+  filter(haspengouw) %>%
+  st_write("output/type7220_haspengouw_ranked.gpkg",
+                               layer = "units_7220_haspengouw_ranked",
+                               delete_dsn = TRUE)
+points_7220_ranked %>%
+  filter(haspengouw) %>%
+  st_write("output/type7220_haspengouw_ranked.gpkg",
+                                layer = "points_7220_haspengouw_ranked")
+
+
 units_7220_ranked %>% st_write("output/units_7220_ranked.shp",
                                delete_dsn = TRUE)
 points_7220_ranked %>% st_write("output/points_7220_ranked.shp",
                                delete_dsn = TRUE)
-  # Laatste versie van gpkg & shp: zie GDrive link in README.
+units_7220_ranked %>%
+  filter(haspengouw) %>%
+  st_write("output/units_7220_haspengouw_ranked.shp",
+                               delete_dsn = TRUE)
+points_7220_ranked %>%
+  filter(haspengouw) %>%
+  st_write("output/points_7220_haspengouw_ranked.shp",
+                                delete_dsn = TRUE)
+# Laatste versie van gpkg & shp: zie GDrive link in README.
   # Shapefile is een formaat met afgekapte veldnamen.
 
   # GeoJSON files voor bewaring in de git repo:

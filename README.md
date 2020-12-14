@@ -16,13 +16,11 @@ Een overeenkomstig GeoPackage en een shapefile formaat staan op Google Drive in 
 
 ## Outputbestanden
 
-De volgende datasets zijn gecreëerd als GeoJSON (RFC7946) en als tsv (attributen + xy-coördinaten in CRS EPSG:31370):
+De volgende datasets zijn gecreëerd als GeoJSON (RFC7946), GeoPackage (met 2 layers: eenheden; punten), shapefile en als tsv (attributen + xy-coördinaten in CRS EPSG:31370):
 
 - alle **populatie-eenheden** (units) van 7220 in Vlaanderen, met GRTS-rangschikking;
 - idem, beperkt tot de regio Haspengouw;
 - alle met de eenheden geassocieerde **punten** (points) met 7220 in Vlaanderen, met GRTS-rangschikking;
 - idem, beperkt tot de regio Haspengouw.
-
-GeoPackage (met 2 layers: eenheden; punten) en shapefile (zie Google Drive) betreffen enkel de Vlaamse objecten.
 
 In alle gevallen zijn dezelfde extra kolommen toegevoegd met betrekking tot de GRTS-rangschikking van **populatie-eenheden** van 7220, inclusief de kolommen specifiek voor Haspengouw.
