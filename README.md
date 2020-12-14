@@ -16,7 +16,7 @@ Een overeenkomstig GeoPackage en een shapefile formaat staan op Google Drive in 
 
 ## Outputbestanden
 
-De volgende datasets zijn gecreëerd als GeoJSON (RFC7946) en als tsv (attributen + xy-coördinaten in CRS EPSG:3170):
+De volgende datasets zijn gecreëerd als GeoJSON (RFC7946) en als tsv (attributen + xy-coördinaten in CRS EPSG:31370):
 
 - alle **populatie-eenheden** (units) van 7220 in Vlaanderen, met GRTS-rangschikking;
 - idem, beperkt tot de regio Haspengouw;
