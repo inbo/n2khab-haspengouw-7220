@@ -1,4 +1,5 @@
 # remotes::install_github("inbo/n2khab") # zie https://inbo.github.io/n2khab/
+renv::restore()
 options(rgdal_show_exportToProj4_warnings = "none")
 library(n2khab)
 library(dplyr)
